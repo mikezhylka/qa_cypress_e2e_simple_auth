@@ -33,7 +33,7 @@ describe("Sign In page", () => {
 
     clickSubmit();
 
-    cy.get("#flash.flash.success", { timeout: 5000 }).should("be.visible");
+    cy.get("#flash.success", { timeout: 5000 }).should("be.visible");
   });
 
   it("should allow to logout", () => {
@@ -42,7 +42,7 @@ describe("Sign In page", () => {
 
     clickSubmit();
 
-    cy.get("#flash.flash.success", { timeout: 5000 }).should("be.visible");
+    cy.get("#flash.success", { timeout: 5000 }).should("be.visible");
     cy.get(`a[href="/logout"]`).should("be.visible").click();
     cy.url().should("contain", "/login");
   });
@@ -53,6 +53,6 @@ describe("Sign In page", () => {
 
     clickSubmit();
 
-    cy.get("#flash.flash.error", { timeout: 5000 }).should("be.visible");
+    cy.get("#flash.error", { timeout: 5000 }).should("be.visible");
   });
 });
